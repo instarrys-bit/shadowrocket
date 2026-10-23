@@ -20,12 +20,12 @@
 - `youtube.response.js`
 - `youtube.request.local.js`
 
-而仓库中的实际文件名是：
+配置已改为与仓库一致的本地文件名：
 
 - `youtube_response.js`
 - `youtube_request_local.js`
 
-**导入前必须让配置中的脚本路径与实际可访问路径一致。** Shadowrocket 不会因为脚本存在于 GitHub 仓库，就自动把它们加载到本地；请根据你实际使用的托管方式/本地脚本导入方式配置路径。不要直接假定私有仓库的 Raw URL 可供 Shadowrocket 访问。
+这只能解决文件名不一致问题，**不等于已经配置远程加载**。当前仓库是私有仓库，Shadowrocket 未经身份验证通常无法从其 Raw URL 拉取脚本。远程加载需要把经过审查的脚本放到可公开读取的 HTTPS 地址，或使用 Shadowrocket 支持且可验证的私有托管方案；不要把访问令牌写入配置。为避免暴露完整分流配置，本次没有公开整个仓库。
 
 ## 安全与测试状态
 
