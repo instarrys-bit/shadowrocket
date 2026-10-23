@@ -1,0 +1,4 @@
+#!name=YouTube Ads Helper
+#!desc=Conservative helper module. Does not change DNS or proxy routing. HTTPS response modification requires manually configured MITM.
+[Script]
+YouTube Response = type=http-response,pattern=^https?://www\.youtubei\.googleapis\.com/youtubei/v1/(browse|next|player|search|reel_watch_sequence|get_watch|config|log_event|get_setting),requires-body=1,max-size=-1,script-path=https://raw.githubusercontent.com/instarrys-bit/shadowrocket/main/youtube_response.js
