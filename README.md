@@ -10,7 +10,10 @@
 | `youtube_request_local.js` | 基于 Maasea/sgmodule 相关脚本修改的请求脚本；移除了第三方 Worker 重定向，相关流程改为本地回退处理。 |
 | `youtube_response.js` | YouTube 响应处理脚本。 |
 
-## 重要：配置与脚本路径
+## 重要：仓库可见性与脚本路径
+
+检查时 GitHub API 将此仓库报告为 **Private（私有）**。如果 Shadowrocket 需要通过未经身份验证的 HTTPS/Raw URL 下载脚本，私有仓库通常无法直接提供给它；不要把带令牌的 URL 或访问令牌写进配置文件。若要远程托管脚本，应先决定是否公开脚本仓库，或改用你信任且支持访问控制的托管方式。公开仓库会让其中的配置与代码对所有人可见，发布前先检查是否包含订阅链接、节点凭据、个人信息或其他秘密。
+
 
 `best_local.conf` 中的 `script-path` 是示例/待配置路径，当前写法为：
 
